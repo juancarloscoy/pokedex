@@ -1,0 +1,8 @@
+<mat-card class="card" appearance="outlined">
+    <img class="card__image" mat-card-image [src]="selectedPokemon.sprites.front_default" alt="">
+    <mat-card-content class="card__content">
+        <div class="card__content__main">
+            <span>{{selectedPokemon.name | titlecase}}</span>
+        </div>
+    </mat-card-content>
+</mat-card>

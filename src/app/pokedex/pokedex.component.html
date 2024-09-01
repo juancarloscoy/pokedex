@@ -1,0 +1,24 @@
+<div class="container">
+    <h1>Pokédex</h1>
+
+    <mat-form-field class="container__field" appearance="fill">
+        <mat-label>Ingrese número o nombre del pokemon</mat-label>
+        <input matInput type="text" [(ngModel)]="searchPokemon">
+        @if (searchPokemon) {
+        <button matSuffix mat-icon-button aria-label="Clear" (click)="clearSearch()">
+            <mat-icon>close</mat-icon>
+        </button>
+        }
+    </mat-form-field>
+
+    <button mat-flat-button (click)="getPokemon()">Buscar</button>
+
+    <div *ngIf="selectedPokemon && showPokemon" class="container__card">
+        <app-poke-screen [selectedPokemon]="selectedPokemon"></app-poke-screen>
+        <app-poke-description [selectedPokemon]="selectedPokemon"></app-poke-description>
+    </div>
+
+    <div *ngIf="!showPokemon" class="container__empty">
+        <span>El numero o nombre <span>{{pokemonNotFound}}</span> del Pokemon, No se encuentra en la Pokédex.</span>
+    </div>
+</div>

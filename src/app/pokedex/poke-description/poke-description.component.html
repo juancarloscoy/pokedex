@@ -1,0 +1,19 @@
+<div class="container">
+    <h1>Información</h1>
+    <div>
+        <span class="container__title">Número: </span>
+        <span>{{selectedPokemon.id}}</span>
+    </div>
+    <div>
+        <span class="container__title">Tipo: </span>
+        <span>{{selectedPokemon.types[0].type.name}}</span>
+    </div>
+    <div>
+        <span class="container__title">Peso: </span>
+        <span> {{convertWeightOrHeight(selectedPokemon.weight)}} kg</span>
+    </div>
+    <div>
+        <span class="container__title">Altura: </span>
+        <span> {{convertWeightOrHeight(selectedPokemon.height)}} m</span>
+    </div>
+</div>

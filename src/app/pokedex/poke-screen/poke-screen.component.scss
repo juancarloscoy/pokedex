@@ -1,0 +1,23 @@
+.card {
+
+    &__content {
+
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+
+        &__main {
+            display: flex;
+            justify-content: center;
+            background: black;
+            color: white;
+            font-size: 32px;
+            border-radius: 12px;
+        }
+    }
+
+    &__image {
+        image-rendering: pixelated;
+    }
+
+}
